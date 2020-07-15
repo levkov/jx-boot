@@ -1,6 +1,6 @@
 cluster:
   clusterName: "sidekube"
-  environmentGitOwner: ""
+  environmentGitOwner: "sidekube"
   environmentGitPublic: false
   project: ""
   provider: kubernetes
