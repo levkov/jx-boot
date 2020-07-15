@@ -5,7 +5,7 @@ cluster:
   project: ""
   provider: kubernetes
   zone: ""
-gitops: true
+gitops: false
 environments:
 - key: dev
 - key: staging
