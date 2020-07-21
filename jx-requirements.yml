@@ -1,27 +1,63 @@
+autoUpdate:
+  enabled: false
+  schedule: ""
+bootConfigURL: https://github.com/levkov/jx-boot
 cluster:
-  clusterName: "sidekube"
-  environmentGitOwner: "root"
+  clusterName: sidekube
+  devEnvApprovers:
+  - root
+  environmentGitOwner: root
   gitKind: gitlab
+  gitName: gitlab
   gitServer: http://10.226.15.13
-  environmentGitPublic: false
-  project: ""
+  namespace: jx
   provider: kubernetes
-  zone: ""  
-gitops: false
 environments:
-- key: dev
-- key: staging
-- key: production
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: dev
+  repository: environment-sidekube-dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+  repository: environment-sidekube-staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
+  repository: environment-sidekube-production
 ingress:
-  domain: ""
+  domain: 192.168.99.65.nip.io
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
     production: false
 kaniko: true
+repository: nexus
 secretStorage: local
 storage:
+  backup:
+    enabled: false
+    url: ""
   logs:
     enabled: false
     url: ""
@@ -31,7 +67,11 @@ storage:
   repository:
     enabled: false
     url: ""
+vault: {}
+velero:
+  schedule: ""
+  ttl: ""
 versionStream:
-  ref: "master"
+  ref: v1.0.540
   url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: lighthouse
