@@ -11,6 +11,8 @@ cluster:
   zone: ""  
 gitops: false
 environments:
+- key: dev
+- key: staging
 - key: production
 ingress:
   domain: ""
