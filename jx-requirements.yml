@@ -1,16 +1,16 @@
 cluster:
-  clusterName: "sidekube"
-  environmentGitOwner: "root"
+  clusterName: sidekube
+  environmentGitOwner: root
   gitKind: gitlab
+  gitName: gitlab
   gitServer: http://10.226.15.13
+  namespace: jx
   environmentGitPublic: false
   project: ""
   provider: kubernetes
   zone: ""  
 gitops: false
 environments:
-- key: dev
-- key: staging
 - key: production
 ingress:
   domain: ""
