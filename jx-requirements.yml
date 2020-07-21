@@ -1,6 +1,6 @@
 cluster:
   clusterName: "sidekube"
-  environmentGitOwner: "sidekube"
+  environmentGitOwner: "root"
   gitKind: gitlab
   gitServer: http://10.226.15.13
   environmentGitPublic: false
