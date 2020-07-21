@@ -1,10 +1,12 @@
 cluster:
   clusterName: "sidekube"
   environmentGitOwner: "sidekube"
+  gitKind: gitlab
+  gitServer: http://10.226.15.13
   environmentGitPublic: false
   project: ""
   provider: kubernetes
-  zone: ""
+  zone: ""  
 gitops: false
 environments:
 - key: dev
